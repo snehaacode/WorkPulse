@@ -70,6 +70,7 @@ index.html
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,14 +84,15 @@ index.html
     }
 
     :root {
-      --bg: #0b1220;
-      --panel: #111c2e;
-      --panel-light: #172438;
-      --border: #26364b;
-      --text: #edf4ff;
-      --muted: #91a2ba;
-      --blue: #60a5fa;
-      --teal: #2dd4bf;
+      --bg: #f3f6fb;
+      --panel: #ffffff;
+      --panel-light: #f8fafc;
+      --border: #e1e8f0;
+      --text: #172b4d;
+      --muted: #64748b;
+      --blue: #2563eb;
+      --teal: #0f9f8f;
+      --sidebar: #13294b;
     }
 
     body {
@@ -116,9 +118,9 @@ index.html
     .sidebar {
       width: 235px;
       flex-shrink: 0;
-      background: #101b2e;
-      border-right: 1px solid var(--border);
-      padding: 26px 16px;
+      background: var(--sidebar);
+      color: white;
+      padding: 25px 16px;
       display: flex;
       flex-direction: column;
     }
@@ -131,18 +133,18 @@ index.html
     }
 
     .brand span {
-      color: var(--blue);
+      color: #60c8e9;
     }
 
     .tagline {
-      color: var(--muted);
+      color: #c1cee0;
       font-size: 12px;
-      margin: 9px 8px 34px;
       line-height: 1.5;
+      margin: 9px 8px 34px;
     }
 
     .nav-label {
-      color: #71839d;
+      color: #9bacc5;
       font-size: 10px;
       letter-spacing: 1.5px;
       margin: 0 10px 12px;
@@ -155,10 +157,10 @@ index.html
 
     .nav button {
       border: 1px solid transparent;
-      border-radius: 9px;
+      border-radius: 8px;
       padding: 12px;
       text-align: left;
-      color: #b6c4d8;
+      color: #d3deed;
       background: transparent;
       font-size: 14px;
     }
@@ -166,12 +168,12 @@ index.html
     .nav button:hover,
     .nav button.active {
       color: white;
-      background: #1c3454;
-      border-color: #29476d;
+      background: #254774;
+      border-color: #365d8e;
     }
 
     .nav button.active {
-      box-shadow: inset 3px 0 var(--blue);
+      box-shadow: inset 3px 0 #60a5fa;
     }
 
     .sidebar-bottom {
@@ -180,17 +182,17 @@ index.html
     }
 
     .quote {
-      background: #172438;
-      border: 1px solid var(--border);
-      border-radius: 12px;
+      background: #1b365b;
+      border: 1px solid #2c4b72;
+      border-radius: 10px;
       padding: 15px;
       line-height: 1.6;
-      color: #b7c8dd;
+      color: #d1deee;
       font-size: 13px;
     }
 
     .quote strong {
-      color: var(--teal);
+      color: #69d7ca;
       display: block;
       margin-bottom: 5px;
     }
@@ -201,23 +203,23 @@ index.html
     }
 
     .topbar {
-      min-height: 76px;
+      min-height: 72px;
+      background: #ffffff;
       border-bottom: 1px solid var(--border);
-      padding: 16px 28px;
+      padding: 15px 28px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      background: #0e1828;
     }
 
     .search {
-      width: min(420px, 60%);
-      background: var(--panel);
+      width: min(420px, 65%);
+      background: #f8fafc;
       color: var(--text);
       border: 1px solid var(--border);
       padding: 12px 14px;
-      border-radius: 9px;
+      border-radius: 8px;
       outline: none;
     }
 
@@ -226,7 +228,6 @@ index.html
     }
 
     .profile {
-      color: #dce8f8;
       font-size: 13px;
       white-space: nowrap;
     }
@@ -235,11 +236,11 @@ index.html
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 35px;
-      height: 35px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
-      background: #1e426c;
-      color: #bfdbfe;
+      background: #dbeafe;
+      color: #1d4ed8;
       font-weight: bold;
       margin-right: 8px;
     }
@@ -255,13 +256,13 @@ index.html
       align-items: center;
       justify-content: space-between;
       gap: 15px;
-      margin-bottom: 25px;
+      margin-bottom: 24px;
     }
 
     .welcome h1 {
       font-size: clamp(22px, 3vw, 29px);
       margin: 0 0 8px;
-      letter-spacing: -0.6px;
+      letter-spacing: -0.5px;
     }
 
     .welcome p {
@@ -287,8 +288,9 @@ index.html
     .stat {
       background: var(--panel);
       border: 1px solid var(--border);
-      border-radius: 13px;
-      padding: 20px;
+      border-radius: 12px;
+      padding: 19px;
+      box-shadow: 0 3px 12px #172b4d08;
       min-width: 0;
     }
 
@@ -306,25 +308,25 @@ index.html
       height: 36px;
       display: grid;
       place-items: center;
-      border-radius: 10px;
-      background: #1b3455;
+      border-radius: 9px;
+      background: #dbeafe;
       color: var(--blue);
       font-size: 18px;
     }
 
     .stat:nth-child(2) .stat-icon {
-      color: var(--teal);
-      background: #123b3a;
+      color: #0f766e;
+      background: #ccfbf1;
     }
 
     .stat:nth-child(3) .stat-icon {
-      color: #c4b5fd;
-      background: #30264e;
+      color: #7c3aed;
+      background: #ede9fe;
     }
 
     .stat:nth-child(4) .stat-icon {
-      color: #fdba74;
-      background: #422f25;
+      color: #c2410c;
+      background: #ffedd5;
     }
 
     .stat h2 {
@@ -346,9 +348,10 @@ index.html
     .panel {
       background: var(--panel);
       border: 1px solid var(--border);
-      border-radius: 13px;
+      border-radius: 12px;
       overflow: hidden;
       margin-bottom: 20px;
+      box-shadow: 0 3px 12px #172b4d06;
     }
 
     .panel-heading {
@@ -367,7 +370,7 @@ index.html
 
     .panel-heading span {
       color: var(--blue);
-      font-size: 12px;
+      font-size: 11px;
     }
 
     .project-list {
@@ -407,18 +410,18 @@ index.html
       padding: 6px 9px;
       font-size: 10px;
       white-space: nowrap;
-      color: #93c5fd;
-      background: #1b3455;
+      color: #1d4ed8;
+      background: #dbeafe;
     }
 
     .status.hold {
-      color: #fdba74;
-      background: #422f25;
+      color: #9a3412;
+      background: #ffedd5;
     }
 
     .status.done {
-      color: #5eead4;
-      background: #123b3a;
+      color: #047857;
+      background: #d1fae5;
     }
 
     .progress-row {
@@ -429,7 +432,7 @@ index.html
 
     .progress-track {
       height: 6px;
-      background: #29384d;
+      background: #e2e8f0;
       border-radius: 10px;
       overflow: hidden;
       flex: 1;
@@ -446,7 +449,7 @@ index.html
     }
 
     .progress-fill.purple {
-      background: #a78bfa;
+      background: #8b5cf6;
     }
 
     .progress-value {
@@ -473,13 +476,13 @@ index.html
       background: var(--panel-light);
       color: var(--text);
       border: 1px solid var(--border);
-      border-radius: 9px;
+      border-radius: 8px;
       font-size: 13px;
     }
 
     .action:hover {
-      border-color: var(--blue);
-      background: #1a2b43;
+      border-color: #93c5fd;
+      background: #eff6ff;
     }
 
     .action span:last-child {
@@ -530,9 +533,9 @@ index.html
 
     .notice {
       padding: 20px;
-      background: linear-gradient(120deg, #182c49, #202744);
-      border: 1px solid #304366;
-      border-radius: 13px;
+      background: linear-gradient(120deg, #eef2ff, #eff6ff);
+      border: 1px solid #dbeafe;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -552,21 +555,21 @@ index.html
     }
 
     .primary-button {
-      background: #2563a6;
+      background: var(--blue);
       color: white;
-      border: 1px solid #3b82c4;
-      border-radius: 8px;
+      border: 1px solid var(--blue);
+      border-radius: 7px;
       padding: 11px 14px;
       font-size: 12px;
       white-space: nowrap;
     }
 
     .primary-button:hover {
-      background: #3077bd;
+      background: #1d4ed8;
     }
 
     #message {
-      color: var(--teal);
+      color: #047857;
       font-size: 12px;
       line-height: 1.6;
       margin: 14px 0 0;
@@ -574,12 +577,13 @@ index.html
 
     footer {
       padding: 20px 28px;
-      color: #71839d;
+      color: var(--muted);
       border-top: 1px solid var(--border);
       font-size: 11px;
       display: flex;
       justify-content: space-between;
       gap: 12px;
+      background: #fff;
     }
 
     @media (max-width: 1000px) {
@@ -627,7 +631,6 @@ index.html
         display: flex;
         overflow-x: auto;
         gap: 7px;
-        padding-bottom: 3px;
       }
 
       .nav button {
@@ -679,10 +682,6 @@ index.html
 
       .stat h2 {
         font-size: 25px;
-      }
-
-      .stat-top {
-        font-size: 11px;
       }
 
       .project-list {
@@ -759,37 +758,22 @@ index.html
 
         <section class="stats">
           <div class="stat">
-            <div class="stat-top">
-              Projects
-              <span class="stat-icon">▤</span>
-            </div>
+            <div class="stat-top">Projects <span class="stat-icon">▤</span></div>
             <h2>05</h2>
             <small>Projects in this demo</small>
           </div>
-
           <div class="stat">
-            <div class="stat-top">
-              Tasks
-              <span class="stat-icon">☑</span>
-            </div>
+            <div class="stat-top">Tasks <span class="stat-icon">☑</span></div>
             <h2>12</h2>
             <small>Sample task count</small>
           </div>
-
           <div class="stat">
-            <div class="stat-top">
-              Team Members
-              <span class="stat-icon">♙</span>
-            </div>
+            <div class="stat-top">Team Members <span class="stat-icon">♙</span></div>
             <h2>08</h2>
             <small>Sample team count</small>
           </div>
-
           <div class="stat">
-            <div class="stat-top">
-              Overall Progress
-              <span class="stat-icon">↗</span>
-            </div>
+            <div class="stat-top">Overall Progress <span class="stat-icon">↗</span></div>
             <h2>65%</h2>
             <small>Illustrative demo value</small>
           </div>
@@ -803,7 +787,7 @@ index.html
                 <span>PROJECT STATUS</span>
               </div>
 
-              <div class="project-list" id="projectList">
+              <div class="project-list">
                 <div class="project">
                   <div class="project-info">
                     <div>
@@ -813,9 +797,7 @@ index.html
                     <span class="status">In Progress</span>
                   </div>
                   <div class="progress-row">
-                    <div class="progress-track">
-                      <div class="progress-fill" style="width:70%"></div>
-                    </div>
+                    <div class="progress-track"><div class="progress-fill" style="width:70%"></div></div>
                     <span class="progress-value">70%</span>
                   </div>
                 </div>
@@ -829,9 +811,7 @@ index.html
                     <span class="status hold">On Hold</span>
                   </div>
                   <div class="progress-row">
-                    <div class="progress-track">
-                      <div class="progress-fill purple" style="width:30%"></div>
-                    </div>
+                    <div class="progress-track"><div class="progress-fill purple" style="width:30%"></div></div>
                     <span class="progress-value">30%</span>
                   </div>
                 </div>
@@ -845,9 +825,7 @@ index.html
                     <span class="status">Planning</span>
                   </div>
                   <div class="progress-row">
-                    <div class="progress-track">
-                      <div class="progress-fill teal" style="width:10%"></div>
-                    </div>
+                    <div class="progress-track"><div class="progress-fill teal" style="width:10%"></div></div>
                     <span class="progress-value">10%</span>
                   </div>
                 </div>
@@ -861,9 +839,7 @@ index.html
                     <span class="status">In Progress</span>
                   </div>
                   <div class="progress-row">
-                    <div class="progress-track">
-                      <div class="progress-fill purple" style="width:60%"></div>
-                    </div>
+                    <div class="progress-track"><div class="progress-fill purple" style="width:60%"></div></div>
                     <span class="progress-value">60%</span>
                   </div>
                 </div>
@@ -877,9 +853,7 @@ index.html
                     <span class="status done">Completed</span>
                   </div>
                   <div class="progress-row">
-                    <div class="progress-track">
-                      <div class="progress-fill teal" style="width:100%"></div>
-                    </div>
+                    <div class="progress-track"><div class="progress-fill teal" style="width:100%"></div></div>
                     <span class="progress-value">100%</span>
                   </div>
                 </div>
@@ -899,26 +873,12 @@ index.html
 
           <div>
             <section class="panel">
-              <div class="panel-heading">
-                <h2>Quick Actions</h2>
-              </div>
+              <div class="panel-heading"><h2>Quick Actions</h2></div>
               <div class="actions">
-                <button class="action" onclick="showMessage('Add Project feature is coming next.')">
-                  <span>＋ &nbsp; Add New Project</span>
-                  <span>›</span>
-                </button>
-                <button class="action" onclick="showMessage('Task creation feature is coming next.')">
-                  <span>✓ &nbsp; Create Task</span>
-                  <span>›</span>
-                </button>
-                <button class="action" onclick="showMessage('Team management feature is coming next.')">
-                  <span>♙ &nbsp; Team Overview</span>
-                  <span>›</span>
-                </button>
-                <button class="action" onclick="showMessage('Reports feature is coming next.')">
-                  <span>▥ &nbsp; View Reports</span>
-                  <span>›</span>
-                </button>
+                <button class="action" onclick="showMessage('Add Project feature is coming next.')"><span>＋ &nbsp; Add New Project</span><span>›</span></button>
+                <button class="action" onclick="showMessage('Task creation feature is coming next.')"><span>✓ &nbsp; Create Task</span><span>›</span></button>
+                <button class="action" onclick="showMessage('Team management feature is coming next.')"><span>♙ &nbsp; Team Overview</span><span>›</span></button>
+                <button class="action" onclick="showMessage('Reports feature is coming next.')"><span>▥ &nbsp; View Reports</span><span>›</span></button>
               </div>
             </section>
 
@@ -927,34 +887,54 @@ index.html
                 <h2>Team Overview</h2>
                 <span>DEMO</span>
               </div>
-
               <div class="team-list">
                 <div class="member">
                   <span class="avatar">SJ</span>
-                  <div class="member-info">
-                    <strong>Sneha</strong>
-                    <small>Project Manager · Sample</small>
-                  </div>
+                  <div class="member-info"><strong>Sneha</strong><small>Project Manager · Sample</small></div>
                   <span class="online"></span>
                 </div>
-
                 <div class="member">
                   <span class="avatar">RK</span>
-                  <div class="member-info">
-                    <strong>Rahul</strong>
-                    <small>Developer · Sample</small>
-                  </div>
+                  <div class="member-info"><strong>Rahul</strong><small>Developer · Sample</small></div>
                   <span class="online"></span>
                 </div>
-
                 <div class="member">
                   <span class="avatar">PR</span>
-                  <div class="member-info">
-                    <strong>Priya</strong>
-                    <small>Designer · Sample</small>
-                  </div>
+                  <div class="member-info"><strong>Priya</strong><small>Designer · Sample</small></div>
                   <span class="online"></span>
                 </div>
-
                 <div class="member">
+                  <span class="avatar">AM</span>
+                  <div class="member-info"><strong>Amit</strong><small>Team Lead · Sample</small></div>
+                  <span class="online"></span>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <p id="message" role="status" aria-live="polite"></p>
+      </main>
+
+      <footer>
+        <span>© WorkPulse · Project Management</span>
+        <span>Built for better teamwork.</span>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    function showMessage(text) {
+      document.getElementById("message").textContent = text;
+    }
+
+    const now = new Date();
+
+    document.getElementById("today").textContent =
+      now.toLocaleDateString("en-IN", {
+        weekday: "short",
+        day: "numeric",
+        month: "short",
+        year: "numeric"
+      
   
