@@ -71,6 +71,7 @@ index.html
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,9 +86,8 @@ index.html
 
     :root {
       --bg: #f3f6fb;
-      --panel: #ffffff;
-      --panel-light: #f8fafc;
-      --border: #e1e8f0;
+      --white: #ffffff;
+      --border: #e2e8f0;
       --text: #172b4d;
       --muted: #64748b;
       --blue: #2563eb;
@@ -116,19 +116,16 @@ index.html
     }
 
     .sidebar {
-      width: 235px;
+      width: 230px;
       flex-shrink: 0;
       background: var(--sidebar);
       color: white;
       padding: 25px 16px;
-      display: flex;
-      flex-direction: column;
     }
 
     .brand {
       font-size: 25px;
       font-weight: bold;
-      letter-spacing: -0.8px;
       margin: 0 8px;
     }
 
@@ -140,7 +137,7 @@ index.html
       color: #c1cee0;
       font-size: 12px;
       line-height: 1.5;
-      margin: 9px 8px 34px;
+      margin: 9px 8px 30px;
     }
 
     .nav-label {
@@ -176,24 +173,20 @@ index.html
       box-shadow: inset 3px 0 #60a5fa;
     }
 
-    .sidebar-bottom {
-      margin-top: auto;
-      padding-top: 30px;
-    }
-
-    .quote {
+    .sidebar-note {
+      margin-top: 40px;
+      padding: 15px;
       background: #1b365b;
       border: 1px solid #2c4b72;
       border-radius: 10px;
-      padding: 15px;
-      line-height: 1.6;
       color: #d1deee;
       font-size: 13px;
+      line-height: 1.6;
     }
 
-    .quote strong {
-      color: #69d7ca;
+    .sidebar-note strong {
       display: block;
+      color: #69d7ca;
       margin-bottom: 5px;
     }
 
@@ -204,7 +197,7 @@ index.html
 
     .topbar {
       min-height: 72px;
-      background: #ffffff;
+      background: white;
       border-bottom: 1px solid var(--border);
       padding: 15px 28px;
       display: flex;
@@ -214,7 +207,7 @@ index.html
     }
 
     .search {
-      width: min(420px, 65%);
+      width: min(420px, 70%);
       background: #f8fafc;
       color: var(--text);
       border: 1px solid var(--border);
@@ -228,21 +221,23 @@ index.html
     }
 
     .profile {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       font-size: 13px;
       white-space: nowrap;
     }
 
     .avatar {
+      width: 36px;
+      height: 36px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 36px;
-      height: 36px;
       border-radius: 50%;
       background: #dbeafe;
       color: #1d4ed8;
       font-weight: bold;
-      margin-right: 8px;
     }
 
     main {
@@ -262,7 +257,6 @@ index.html
     .welcome h1 {
       font-size: clamp(22px, 3vw, 29px);
       margin: 0 0 8px;
-      letter-spacing: -0.5px;
     }
 
     .welcome p {
@@ -286,7 +280,7 @@ index.html
     }
 
     .stat {
-      background: var(--panel);
+      background: white;
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 19px;
@@ -346,7 +340,7 @@ index.html
     }
 
     .panel {
-      background: var(--panel);
+      background: white;
       border: 1px solid var(--border);
       border-radius: 12px;
       overflow: hidden;
@@ -473,7 +467,7 @@ index.html
       width: 100%;
       text-align: left;
       padding: 14px;
-      background: var(--panel-light);
+      background: #f8fafc;
       color: var(--text);
       border: 1px solid var(--border);
       border-radius: 8px;
@@ -499,11 +493,6 @@ index.html
       align-items: center;
       gap: 11px;
       padding: 12px 0;
-    }
-
-    .member .avatar {
-      flex-shrink: 0;
-      margin: 0;
     }
 
     .member-info {
@@ -583,7 +572,7 @@ index.html
       display: flex;
       justify-content: space-between;
       gap: 12px;
-      background: #fff;
+      background: white;
     }
 
     @media (max-width: 1000px) {
@@ -623,7 +612,7 @@ index.html
       }
 
       .nav-label,
-      .sidebar-bottom {
+      .sidebar-note {
         display: none;
       }
 
@@ -652,11 +641,6 @@ index.html
 
       .profile {
         font-size: 0;
-      }
-
-      .profile .avatar {
-        font-size: 12px;
-        margin: 0;
       }
 
       main {
@@ -707,13 +691,11 @@ index.html
 
 <body>
   <div class="app">
-
     <aside class="sidebar">
       <div class="brand">Work<span>Pulse</span></div>
       <p class="tagline">Employee &amp; Project Management</p>
 
       <p class="nav-label">WORKSPACE</p>
-
       <nav class="nav">
         <button class="active" data-page="Dashboard">▦ &nbsp; Dashboard</button>
         <button data-page="Projects">▤ &nbsp; Projects</button>
@@ -723,23 +705,17 @@ index.html
         <button data-page="Settings">⚙ &nbsp; Settings</button>
       </nav>
 
-      <div class="sidebar-bottom">
-        <div class="quote">
-          <strong>WORK SMARTER</strong>
-          Better teamwork starts with clear progress and communication.
-        </div>
+      <div class="sidebar-note">
+        <strong>WORK SMARTER</strong>
+        Better teamwork starts with clear progress and communication.
       </div>
     </aside>
 
     <div class="workspace">
       <div class="topbar">
-        <input
-          class="search"
-          id="search"
-          type="search"
-          placeholder="Search projects or tasks..."
-          aria-label="Search projects or tasks"
-        >
+        <input class="search" id="search" type="search"
+          placeholder="Search projects..."
+          aria-label="Search projects">
 
         <div class="profile">
           <span class="avatar">SJ</span>
@@ -865,7 +841,8 @@ index.html
                 <h3>Small steps. Real progress.</h3>
                 <p>Keep your tasks clear and your team moving forward.</p>
               </div>
-              <button class="primary-button" onclick="showMessage('Your task workspace is ready for the next feature.')">
+              <button class="primary-button"
+                onclick="showMessage('Your task workspace is ready for the next feature.')">
                 View Tasks →
               </button>
             </section>
@@ -936,5 +913,18 @@ index.html
         day: "numeric",
         month: "short",
         year: "numeric"
-      
-  
+      });
+
+    const navButtons = document.querySelectorAll(".nav button");
+
+    navButtons.forEach(function(button) {
+      button.addEventListener("click", function() {
+        navButtons.forEach(function(item) {
+          item.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        const page = button.dataset.page;
+
+        document.getElementById("pageTitle").textContent =
