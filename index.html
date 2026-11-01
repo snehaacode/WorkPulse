@@ -889,6 +889,43 @@ footer {
           </div>
         </div>
 
+
+
+<div id="projectModal" hidden>
+  <section class="panel">
+    <div class="panel-heading">
+      <h2>Add New Project</h2>
+      <button type="button" onclick="closeProjectForm()">✕</button>
+    </div>
+
+    <form id="projectForm">
+      <label for="projectName">Project Name</label>
+      <input id="projectName" type="text"
+        placeholder="Enter project name" required>
+
+      <label for="projectDepartment">Department</label>
+      <select id="projectDepartment" required>
+        <option value="">Select department</option>
+        <option>Development</option>
+        <option>Design</option>
+        <option>Marketing</option>
+        <option>Human Resources</option>
+        <option>Other</option>
+      </select>
+
+      <label for="projectDeadline">Deadline</label>
+      <input id="projectDeadline" type="date" required>
+
+      <button class="primary-button" type="submit">
+        Save Project
+      </button>
+    </form>
+  </section>
+</div>
+
+
+
+
         <p id="message" role="status" aria-live="polite"></p>
       </main>
 
