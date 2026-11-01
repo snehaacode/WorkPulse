@@ -926,6 +926,15 @@ footer {
   <span>＋ &nbsp; Add New Project</span>
   <span>›</span>
 </button>
+<button class="action" onclick="openProjectForm()">
+  <span>＋ &nbsp; Add New Project</span>
+  <span>›</span>
+</button>
+
+<!-- Form ithe asel -->
+<div id="projectModal" hidden>
+  <!-- Tujha existing form code -->
+</div>
 
 
 
@@ -968,12 +977,7 @@ footer {
 
 
 
-<div id="projectModal" hidden>
-  <section class="panel">
-    <div class="panel-heading">
-      <h2>Add New Project</h2>
-      <button type="button" onclick="closeProjectForm()">✕</button>
-    </div>
+
 
     <form id="projectForm">
       <label for="projectName">Project Name</label>
