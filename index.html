@@ -929,6 +929,16 @@ footer {
         document.getElementById("pageTitle").textContent =
 page + (page === "Dashboard" ? " Overview" : "");
       });
-    });  </script>
+    }); 
+const themeSwitcher = document.getElementById("themeSwitcher");
+
+if (themeSwitcher) {
+  themeSwitcher.addEventListener("change", function() {
+    document.body.setAttribute("data-theme", this.value);
+  });
+}
+
+
+ </script>
 </body>
 </html>
