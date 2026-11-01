@@ -6,6 +6,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WorkPulse | Dashboard</title>
 
+
+/* Add Project Form Styling */
+#projectModal {
+  margin: 24px 0;
+}
+
+#projectModal .panel {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--white);
+}
+
+#projectForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#projectForm label {
+  margin-top: 8px;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+#projectForm input,
+#projectForm select {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+}
+
+#projectForm button[type="submit"] {
+  margin-top: 14px;
+  min-height: 44px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#projectModal .panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+#projectModal .panel-heading h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
+  #projectModal .panel {
+    padding: 16px;
+  }
+}
+
+
+
+
   <style>
     * {
       box-sizing: border-box;
