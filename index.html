@@ -929,12 +929,20 @@ footer {
         document.getElementById("pageTitle").textContent =
 page + (page === "Dashboard" ? " Overview" : "");
       });
-    }); 
+    });
+
 const themeSwitcher = document.getElementById("themeSwitcher");
 
+const savedTheme = localStorage.getItem("workpulse-theme") || "light";
+
+document.body.setAttribute("data-theme", savedTheme);
+
 if (themeSwitcher) {
+  themeSwitcher.value = savedTheme;
+
   themeSwitcher.addEventListener("change", function() {
     document.body.setAttribute("data-theme", this.value);
+    localStorage.setItem("workpulse-theme", this.value);
   });
 }
 
