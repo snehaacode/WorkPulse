@@ -638,6 +638,42 @@ body[data-theme="teal"] {
         flex-direction: column;
       }
     }
+
+
+/* Theme Switcher */
+.theme-select {
+  max-width: 150px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Theme-aware backgrounds */
+.topbar,
+.stat,
+.panel,
+footer {
+  background: var(--white);
+}
+
+.action {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.notice {
+  background: var(--white);
+  border-color: var(--border);
+}
+
+
+
+
   </style>
 </head>
 
